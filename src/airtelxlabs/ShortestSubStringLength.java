@@ -5,7 +5,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Q1 {
+public class ShortestSubStringLength {
+    //The questions was to find the length of the shortest substring which contains all the unique characters contained in the string
+    //dabbcabcd -> last 4 characters abcd contains all the unique characters hence answer is 4
     public static void main(String[] args) {
         System.out.println(shortestSubstring("dabbcabcd"));
         System.out.println(shortestSubstring("bab"));
@@ -64,12 +66,6 @@ public class Q1 {
                 map.put(arr[start], val - 1);
 
                 start = start + 1;
-
-//                if(end < arr.length - 1) {
-//                    end = end + 1;
-//                    val = map.get(arr[end]);
-//                    map.put(arr[end], val + 1);
-//                }
             } else {
                 if(end < arr.length - 1) {
                     end = end + 1;
